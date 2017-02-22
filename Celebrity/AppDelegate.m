@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    GamePlayViewController *gameplayVC = [[GamePlayViewController alloc] init];
+    GamePlayViewController *gameplayVC = [[GamePlayViewController alloc] initWithNibName:@"GamePlayViewController" bundle:nil];
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     self.window.rootViewController = gameplayVC;

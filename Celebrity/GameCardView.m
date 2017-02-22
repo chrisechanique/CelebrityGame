@@ -22,12 +22,20 @@
     if (self = [super init]) {
         self.wordLabel.text = word;
         self.timerLabel.text = timer;
-        [self setup];
+        [self setupShadow];
     }
     return self;
 }
 
-- (void)setup {
+- (void)setupViews {
+    self.backgroundColor = [UIColor purpleColor];
+    self.wordLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.timerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    
+    
+}
+
+- (void)setupShadow {
     self.layer.shadowColor = [UIColor darkGrayColor].CGColor;
     self.layer.shadowOffset = CGSizeMake(0, 1);
     self.layer.shadowOpacity = 0.2f;

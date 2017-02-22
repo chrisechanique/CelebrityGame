@@ -14,10 +14,17 @@
 		056408071A24480B00670ADD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056408061A24480B00670ADD /* Images.xcassets */; };
 		0564080A1A24480B00670ADD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 056408081A24480B00670ADD /* LaunchScreen.xib */; };
 		056408161A24480C00670ADD /* CelebrityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 056408151A24480C00670ADD /* CelebrityTests.m */; };
-		056408211A244B0000670ADD /* WordPile.m in Sources */ = {isa = PBXBuildFile; fileRef = 056408201A244B0000670ADD /* WordPile.m */; };
-		056408231A2452B300670ADD /* GameCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 056408221A2452B300670ADD /* GameCardView.xib */; };
+		056408211A244B0000670ADD /* CelebrityPile.m in Sources */ = {isa = PBXBuildFile; fileRef = 056408201A244B0000670ADD /* CelebrityPile.m */; };
 		056408291A24552500670ADD /* GameCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 056408281A24552500670ADD /* GameCardView.m */; };
 		0564082F1A2460CC00670ADD /* GameSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 0564082E1A2460CC00670ADD /* GameSession.m */; };
+		F32446DE1A47E986008C70A3 /* GamePlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32446DD1A47E986008C70A3 /* GamePlayViewController.xib */; };
+		F33E25671A4A8E650054928C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33E25651A4A8E650054928C /* ViewController.m */; };
+		F33E25681A4A8E650054928C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33E25661A4A8E650054928C /* ViewController.xib */; };
+		F3A284091A27925C001F1447 /* Celebrity.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A284081A27925C001F1447 /* Celebrity.m */; };
+		F3A2840C1A28FA4F001F1447 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A2840B1A28FA4F001F1447 /* Team.m */; };
+		F3A2840F1A28FAEC001F1447 /* CoreConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A2840E1A28FAEC001F1447 /* CoreConstants.m */; };
+		F3A284121A290150001F1447 /* GameRound.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A284111A290150001F1447 /* GameRound.m */; };
+		F3A284151A2919B7001F1447 /* NSTimer+StartStop.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A284141A2919B7001F1447 /* NSTimer+StartStop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +51,26 @@
 		0564080F1A24480C00670ADD /* CelebrityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CelebrityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		056408141A24480C00670ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		056408151A24480C00670ADD /* CelebrityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CelebrityTests.m; sourceTree = "<group>"; };
-		0564081F1A244B0000670ADD /* WordPile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordPile.h; sourceTree = "<group>"; };
-		056408201A244B0000670ADD /* WordPile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordPile.m; sourceTree = "<group>"; };
-		056408221A2452B300670ADD /* GameCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCardView.xib; sourceTree = "<group>"; };
+		0564081F1A244B0000670ADD /* CelebrityPile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelebrityPile.h; sourceTree = "<group>"; };
+		056408201A244B0000670ADD /* CelebrityPile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CelebrityPile.m; sourceTree = "<group>"; };
 		056408271A24552500670ADD /* GameCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCardView.h; sourceTree = "<group>"; };
 		056408281A24552500670ADD /* GameCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCardView.m; sourceTree = "<group>"; };
 		0564082D1A2460CC00670ADD /* GameSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSession.h; sourceTree = "<group>"; };
 		0564082E1A2460CC00670ADD /* GameSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSession.m; sourceTree = "<group>"; };
+		F32446DD1A47E986008C70A3 /* GamePlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GamePlayViewController.xib; sourceTree = "<group>"; };
+		F33E25641A4A8E650054928C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F33E25651A4A8E650054928C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F33E25661A4A8E650054928C /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		F3A284071A27925C001F1447 /* Celebrity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Celebrity.h; sourceTree = "<group>"; };
+		F3A284081A27925C001F1447 /* Celebrity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Celebrity.m; sourceTree = "<group>"; };
+		F3A2840A1A28FA4F001F1447 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		F3A2840B1A28FA4F001F1447 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		F3A2840D1A28FAEC001F1447 /* CoreConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreConstants.h; sourceTree = "<group>"; };
+		F3A2840E1A28FAEC001F1447 /* CoreConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreConstants.m; sourceTree = "<group>"; };
+		F3A284101A290150001F1447 /* GameRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRound.h; sourceTree = "<group>"; };
+		F3A284111A290150001F1447 /* GameRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRound.m; sourceTree = "<group>"; };
+		F3A284131A2919B7001F1447 /* NSTimer+StartStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+StartStop.h"; sourceTree = "<group>"; };
+		F3A284141A2919B7001F1447 /* NSTimer+StartStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+StartStop.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +119,9 @@
 				056408251A2454F700670ADD /* Models */,
 				056408241A2454EB00670ADD /* Resources */,
 				0564082A1A24552900670ADD /* Views */,
+				F3A2840D1A28FAEC001F1447 /* CoreConstants.h */,
+				F3A2840E1A28FAEC001F1447 /* CoreConstants.m */,
+				F3A284161A2919C0001F1447 /* Categories */,
 			);
 			path = Celebrity;
 			sourceTree = "<group>";
@@ -134,7 +157,6 @@
 			children = (
 				056408061A24480B00670ADD /* Images.xcassets */,
 				056408081A24480B00670ADD /* LaunchScreen.xib */,
-				056408221A2452B300670ADD /* GameCardView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -142,11 +164,17 @@
 		056408251A2454F700670ADD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F3A284071A27925C001F1447 /* Celebrity.h */,
+				F3A284081A27925C001F1447 /* Celebrity.m */,
 				056407FD1A24480B00670ADD /* Celebrity.xcdatamodeld */,
-				0564081F1A244B0000670ADD /* WordPile.h */,
-				056408201A244B0000670ADD /* WordPile.m */,
+				0564081F1A244B0000670ADD /* CelebrityPile.h */,
+				056408201A244B0000670ADD /* CelebrityPile.m */,
+				F3A284101A290150001F1447 /* GameRound.h */,
+				F3A284111A290150001F1447 /* GameRound.m */,
 				0564082D1A2460CC00670ADD /* GameSession.h */,
 				0564082E1A2460CC00670ADD /* GameSession.m */,
+				F3A2840A1A28FA4F001F1447 /* Team.h */,
+				F3A2840B1A28FA4F001F1447 /* Team.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -156,6 +184,10 @@
 			children = (
 				056408001A24480B00670ADD /* GamePlayViewController.h */,
 				056408011A24480B00670ADD /* GamePlayViewController.m */,
+				F32446DD1A47E986008C70A3 /* GamePlayViewController.xib */,
+				F33E25641A4A8E650054928C /* ViewController.h */,
+				F33E25651A4A8E650054928C /* ViewController.m */,
+				F33E25661A4A8E650054928C /* ViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +199,15 @@
 				056408281A24552500670ADD /* GameCardView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		F3A284161A2919C0001F1447 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F3A284131A2919B7001F1447 /* NSTimer+StartStop.h */,
+				F3A284141A2919B7001F1447 /* NSTimer+StartStop.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +289,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32446DE1A47E986008C70A3 /* GamePlayViewController.xib in Resources */,
 				0564080A1A24480B00670ADD /* LaunchScreen.xib in Resources */,
+				F33E25681A4A8E650054928C /* ViewController.xib in Resources */,
 				056408071A24480B00670ADD /* Images.xcassets in Resources */,
-				056408231A2452B300670ADD /* GameCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +311,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				056408291A24552500670ADD /* GameCardView.m in Sources */,
+				F3A284091A27925C001F1447 /* Celebrity.m in Sources */,
 				056407FC1A24480B00670ADD /* AppDelegate.m in Sources */,
+				F3A284121A290150001F1447 /* GameRound.m in Sources */,
 				0564082F1A2460CC00670ADD /* GameSession.m in Sources */,
+				F3A2840C1A28FA4F001F1447 /* Team.m in Sources */,
+				F33E25671A4A8E650054928C /* ViewController.m in Sources */,
 				056407F91A24480B00670ADD /* main.m in Sources */,
-				056408211A244B0000670ADD /* WordPile.m in Sources */,
+				F3A2840F1A28FAEC001F1447 /* CoreConstants.m in Sources */,
+				056408211A244B0000670ADD /* CelebrityPile.m in Sources */,
 				056408021A24480B00670ADD /* GamePlayViewController.m in Sources */,
 				056407FF1A24480B00670ADD /* Celebrity.xcdatamodeld in Sources */,
+				F3A284151A2919B7001F1447 /* NSTimer+StartStop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +373,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -366,6 +415,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -389,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Celebrity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -399,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Celebrity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
