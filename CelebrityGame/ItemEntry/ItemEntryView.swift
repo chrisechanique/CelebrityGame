@@ -19,27 +19,30 @@ class ItemEntryView: UIView {
     
     weak var delegate: ItemEntryViewDelegate?
     
-    let label = UILabel()
-    let textField = UITextField()
-    let backButton = UIButton(type: .system)
+    let label = Label(title: "Enter An Item")
+    let textField = TextField(placeholder: "Barbra Streisand")
+    let backButton = Button(title: "Back")
     
     init() {
         super.init(frame: .zero)
+        backgroundColor = .white
         addSubview(label)
         addSubview(textField)
         addSubview(backButton)
+        
+        backButton.layer.borderColor = nil
+        backButton.setTitleColor(UIColor.lightBlue(), for: .normal)
         
         label.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
             make.top.equalTo(self.snp.top).offset(20)
         }
-        label.text = "Enter an item"
+        label.textColor = UIColor.lightBlue()
         
-        textField.placeholder = "Barbra Streisand"
-        textField.textColor = .blue
         textField.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
-            make.top.equalTo(label).offset(10)
+            make.top.equalTo(label.snp.bottom).offset(10)
+            make.height.equalTo(60)
         }
         
         backButton.addTarget(self, action: #selector(ItemEntryView.didTapBack), for:.touchUpInside)
@@ -48,6 +51,8 @@ class ItemEntryView: UIView {
             make.centerY.equalTo(label)
             make.leading.equalTo(self).inset(20)
         }
+        
+        textField.becomeFirstResponder()
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -55,6 +60,12 @@ class ItemEntryView: UIView {
     }
 
     func didTapBack() {
+        textField.resignFirstResponder()
         delegate?.didTapBack()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        textField.layer.cornerRadius = textField.frame.height/2
     }
 }

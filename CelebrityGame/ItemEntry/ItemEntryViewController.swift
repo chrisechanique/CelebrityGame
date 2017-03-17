@@ -20,7 +20,6 @@ class ItemEntryViewController: UIViewController, ItemEntryViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
         
         let itemEntryView = ItemEntryView()
         itemEntryView.delegate = self
@@ -29,7 +28,7 @@ class ItemEntryViewController: UIViewController, ItemEntryViewDelegate {
             make.edges.equalTo(view)
         }
     }
-    
+        
     func didTapBack() {
         delegate?.didTapBack()
     }

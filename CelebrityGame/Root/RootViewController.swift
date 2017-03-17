@@ -16,7 +16,6 @@ class RootViewController: UIViewController, HomeViewControllerDelegate, ItemEntr
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
         let homeViewController = HomeViewController()
         addNewChild(viewController: homeViewController)
         homeViewController.delegate = self
@@ -26,9 +25,6 @@ class RootViewController: UIViewController, HomeViewControllerDelegate, ItemEntr
     private func addNewChild(viewController: UIViewController) {
         addChildViewController(viewController)
         view.addSubview(viewController.view)
-        viewController.view.snp.makeConstraints { make in
-            make.edges.equalTo(view).inset(40)
-        }
         viewController.didMove(toParentViewController: self)
     }
     

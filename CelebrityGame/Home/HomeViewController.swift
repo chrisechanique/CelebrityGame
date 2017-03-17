@@ -14,23 +14,26 @@ protocol HomeViewControllerDelegate: class {
     func didTapNewGame()
 }
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, HomeViewDelegate {
     
     weak var delegate: HomeViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let newGameButton = UIButton(type: .system)
-        newGameButton.setTitle("New Game", for: .normal)
-        view.addSubview(newGameButton)
-        view.backgroundColor = .green
-        newGameButton.snp.makeConstraints { make in
-            make.center.equalTo(view)
+        let homeView = HomeView()
+        view.addSubview(homeView)
+        
+        homeView.snp.makeConstraints { make in
+            make.edges.equalTo(view)
         }
-        newGameButton.addTarget(self, action: "didTapNewGame", for: .touchUpInside)
+        homeView.delegate = self
     }
-    
+        
     func didTapNewGame() {
+        delegate?.didTapNewGame()
+    }
+        
+    func didTapSettings() {
         delegate?.didTapNewGame()
     }
 }
