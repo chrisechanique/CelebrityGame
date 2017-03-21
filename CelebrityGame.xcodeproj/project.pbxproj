@@ -23,10 +23,14 @@
 		608F7D511E7BA52100344284 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D501E7BA52100344284 /* UIFont+Extensions.swift */; };
 		608F7D531E7BAC0E00344284 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D521E7BAC0E00344284 /* BorderedButton.swift */; };
 		608F7D551E7BB47100344284 /* ItemEntryCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D541E7BB47100344284 /* ItemEntryCompleteView.swift */; };
-		608F7D571E7BB4D300344284 /* ItemEntryProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D561E7BB4D300344284 /* ItemEntryProgressView.swift */; };
+		608F7D571E7BB4D300344284 /* ItemEntryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D561E7BB4D300344284 /* ItemEntryHeaderView.swift */; };
 		608F7D591E7BB52C00344284 /* GamePlayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D581E7BB52C00344284 /* GamePlayHeaderView.swift */; };
-		608F7D5B1E7BB56200344284 /* GamePlayScoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D5A1E7BB56200344284 /* GamePlayScoringView.swift */; };
+		608F7D5B1E7BB56200344284 /* GamePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D5A1E7BB56200344284 /* GamePlayView.swift */; };
 		608F7D5D1E7BB57200344284 /* GamePlayCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D5C1E7BB57200344284 /* GamePlayCompleteView.swift */; };
+		608F7D5F1E7CB8D100344284 /* ItemEntryProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D5E1E7CB8D100344284 /* ItemEntryProgressView.swift */; };
+		608F7D611E7CD31A00344284 /* GamePlayScoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D601E7CD31A00344284 /* GamePlayScoringView.swift */; };
+		608F7D631E7CD5D000344284 /* GamePlayScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D621E7CD5D000344284 /* GamePlayScoreboardView.swift */; };
+		608F7D651E7CDD1B00344284 /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F7D641E7CDD1B00344284 /* BorderedLabel.swift */; };
 		A88C733FB87907BBF31A5CB0 /* Pods_CelebrityGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CD7A27AFE8400299404DFC /* Pods_CelebrityGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,10 +51,14 @@
 		608F7D501E7BA52100344284 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Extensions.swift"; path = "Common/UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		608F7D521E7BAC0E00344284 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderedButton.swift; path = Common/BorderedButton.swift; sourceTree = "<group>"; };
 		608F7D541E7BB47100344284 /* ItemEntryCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemEntryCompleteView.swift; path = ItemEntry/ItemEntryCompleteView.swift; sourceTree = "<group>"; };
-		608F7D561E7BB4D300344284 /* ItemEntryProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemEntryProgressView.swift; path = ItemEntry/ItemEntryProgressView.swift; sourceTree = "<group>"; };
+		608F7D561E7BB4D300344284 /* ItemEntryHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemEntryHeaderView.swift; path = ItemEntry/ItemEntryHeaderView.swift; sourceTree = "<group>"; };
 		608F7D581E7BB52C00344284 /* GamePlayHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayHeaderView.swift; path = GamePlay/GamePlayHeaderView.swift; sourceTree = "<group>"; };
-		608F7D5A1E7BB56200344284 /* GamePlayScoringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayScoringView.swift; path = GamePlay/GamePlayScoringView.swift; sourceTree = "<group>"; };
+		608F7D5A1E7BB56200344284 /* GamePlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayView.swift; path = GamePlay/GamePlayView.swift; sourceTree = "<group>"; };
 		608F7D5C1E7BB57200344284 /* GamePlayCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayCompleteView.swift; path = GamePlay/GamePlayCompleteView.swift; sourceTree = "<group>"; };
+		608F7D5E1E7CB8D100344284 /* ItemEntryProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemEntryProgressView.swift; path = ItemEntry/ItemEntryProgressView.swift; sourceTree = "<group>"; };
+		608F7D601E7CD31A00344284 /* GamePlayScoringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayScoringView.swift; path = GamePlay/GamePlayScoringView.swift; sourceTree = "<group>"; };
+		608F7D621E7CD5D000344284 /* GamePlayScoreboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayScoreboardView.swift; path = GamePlay/GamePlayScoreboardView.swift; sourceTree = "<group>"; };
+		608F7D641E7CDD1B00344284 /* BorderedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderedLabel.swift; path = Common/BorderedLabel.swift; sourceTree = "<group>"; };
 		60E835BA1E3DB20C004A2253 /* CelebrityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CelebrityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E835BD1E3DB20C004A2253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60E835C91E3DB20C004A2253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +103,8 @@
 				608D57C61E3DB78B006DE201 /* ItemEntryViewController.swift */,
 				608D57E81E3DDA23006DE201 /* ItemEntryView.swift */,
 				608F7D541E7BB47100344284 /* ItemEntryCompleteView.swift */,
-				608F7D561E7BB4D300344284 /* ItemEntryProgressView.swift */,
+				608F7D561E7BB4D300344284 /* ItemEntryHeaderView.swift */,
+				608F7D5E1E7CB8D100344284 /* ItemEntryProgressView.swift */,
 			);
 			name = "Item Entry";
 			sourceTree = "<group>";
@@ -104,8 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				608D57D01E3DB7F0006DE201 /* GamePlayViewController.swift */,
-				608F7D5A1E7BB56200344284 /* GamePlayScoringView.swift */,
+				608F7D621E7CD5D000344284 /* GamePlayScoreboardView.swift */,
+				608F7D5A1E7BB56200344284 /* GamePlayView.swift */,
 				608F7D581E7BB52C00344284 /* GamePlayHeaderView.swift */,
+				608F7D601E7CD31A00344284 /* GamePlayScoringView.swift */,
 				608F7D5C1E7BB57200344284 /* GamePlayCompleteView.swift */,
 			);
 			name = GamePlay;
@@ -128,6 +139,7 @@
 				608F7D481E7B933C00344284 /* UIColor+Extensions.swift */,
 				608F7D501E7BA52100344284 /* UIFont+Extensions.swift */,
 				608F7D521E7BAC0E00344284 /* BorderedButton.swift */,
+				608F7D641E7CDD1B00344284 /* BorderedLabel.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -301,19 +313,23 @@
 				608F7D461E7B91C500344284 /* Button.swift in Sources */,
 				608F7D4D1E7BA0D100344284 /* Label.swift in Sources */,
 				608F7D591E7BB52C00344284 /* GamePlayHeaderView.swift in Sources */,
+				608F7D651E7CDD1B00344284 /* BorderedLabel.swift in Sources */,
 				608F7D5D1E7BB57200344284 /* GamePlayCompleteView.swift in Sources */,
+				608F7D5F1E7CB8D100344284 /* ItemEntryProgressView.swift in Sources */,
 				608F7D551E7BB47100344284 /* ItemEntryCompleteView.swift in Sources */,
 				608D57BD1E3DB391006DE201 /* AppDelegate.swift in Sources */,
-				608F7D5B1E7BB56200344284 /* GamePlayScoringView.swift in Sources */,
-				608F7D571E7BB4D300344284 /* ItemEntryProgressView.swift in Sources */,
+				608F7D5B1E7BB56200344284 /* GamePlayView.swift in Sources */,
+				608F7D571E7BB4D300344284 /* ItemEntryHeaderView.swift in Sources */,
 				608F7D531E7BAC0E00344284 /* BorderedButton.swift in Sources */,
 				608D57D11E3DB7F0006DE201 /* GamePlayViewController.swift in Sources */,
 				608F7D4F1E7BA49800344284 /* TextField.swift in Sources */,
 				608D57E91E3DDA23006DE201 /* ItemEntryView.swift in Sources */,
+				608F7D631E7CD5D000344284 /* GamePlayScoreboardView.swift in Sources */,
 				608F7D491E7B933C00344284 /* UIColor+Extensions.swift in Sources */,
 				608F7D511E7BA52100344284 /* UIFont+Extensions.swift in Sources */,
 				608F7D4B1E7B95C300344284 /* HomeButton.swift in Sources */,
 				608D57CD1E3DB7D6006DE201 /* HomeViewController.swift in Sources */,
+				608F7D611E7CD31A00344284 /* GamePlayScoringView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

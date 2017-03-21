@@ -10,11 +10,11 @@ import UIKit
 
 class Label: UILabel {
     
-    required init(title: String) {
-        super.init(frame: .zero)
+    required init(frame: CGRect = .zero, title: String? = nil, textColor: UIColor = UIColor.darkPurple(), size: CGFloat = 24.0) {
+        super.init(frame: frame)
         text = title
-        font = UIFont.defaultFont()
-        textColor = UIColor.darkPurple()
+        font = UIFont.defaultFont(size: size)
+        self.textColor = textColor
     }
     
     required init?(coder aDecoder: NSCoder) {

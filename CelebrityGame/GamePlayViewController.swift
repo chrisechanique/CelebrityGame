@@ -10,5 +10,11 @@ import UIKit
 import SnapKit
 
 class GamePlayViewController: UIViewController {
+ 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let gamePlayView = GamePlayView(frame: view.frame)
+        view.addSubview(gamePlayView)
+    }
     
 }

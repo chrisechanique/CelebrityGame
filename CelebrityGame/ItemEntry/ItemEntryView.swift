@@ -15,23 +15,27 @@ protocol ItemEntryViewDelegate: class {
     func didTapBack()
 }
 
-class ItemEntryView: UIView {
+class ItemEntryView: UIView, HeaderViewDelegate {
     
     weak var delegate: ItemEntryViewDelegate?
     
-    let label = Label(title: "Enter An Item")
-    let textField = TextField(placeholder: "Barbra Streisand")
-    let backButton = Button(title: "Back")
+    private let label = Label(title: "Enter An Item")
+    private let textField = TextField(placeholder: "Barbra Streisand")
     
-    init() {
-        super.init(frame: .zero)
+    let headerView = ItemEntryHeaderView(frame: .zero)
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         backgroundColor = .white
+        addSubview(headerView)
         addSubview(label)
         addSubview(textField)
-        addSubview(backButton)
         
-        backButton.layer.borderColor = nil
-        backButton.setTitleColor(UIColor.lightBlue(), for: .normal)
+        headerView.delegate = self
+        headerView.snp.makeConstraints { (make) in
+            make.top.leading.trailing.equalTo(self)
+            make.height.equalTo(80)
+        }
         
         label.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
@@ -45,27 +49,27 @@ class ItemEntryView: UIView {
             make.height.equalTo(60)
         }
         
-        backButton.addTarget(self, action: #selector(ItemEntryView.didTapBack), for:.touchUpInside)
-        backButton.setTitle("Back", for: .normal)
-        backButton.snp.makeConstraints { (make) in
-            make.centerY.equalTo(label)
-            make.leading.equalTo(self).inset(20)
-        }
-        
         textField.becomeFirstResponder()
     }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
-
-    func didTapBack() {
-        textField.resignFirstResponder()
-        delegate?.didTapBack()
-    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         textField.layer.cornerRadius = textField.frame.height/2
     }
+    
+    // MARK: - HeaderViewDelegate
+    func didTapBack() {
+        textField.resignFirstResponder()
+        delegate?.didTapBack()
+    }
+    
+    // MARK: - Public
+    func set(progress: Int) {
+        headerView.set(progress)
+    }
+    
 }

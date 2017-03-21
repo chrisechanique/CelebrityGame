@@ -71,4 +71,24 @@ extension UIColor {
     class func lightBlue() -> UIColor {
         return UIColor(hex: "64CEF5")
     }
+    
+    class func lightYellow() -> UIColor {
+        return UIColor(hex: "FAFAC2")
+    }
+    
+    class func darkYellow() -> UIColor {
+        return UIColor(hex: "E6CA15")
+    }
+    
+    class func lightGreen() -> UIColor {
+        return UIColor(hex: "E6F4E4")
+    }
+    
+    class func darkGreen() -> UIColor {
+        return UIColor(hex: "62B64B")
+    }
+    
+    class func darkGray() -> UIColor {
+        return UIColor(hex: "9B9B9B")
+    }
 }

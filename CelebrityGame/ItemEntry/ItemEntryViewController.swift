@@ -14,22 +14,30 @@ protocol ItemEntryViewControllerDelegate: class {
     func didTapBack()
 }
 
-class ItemEntryViewController: UIViewController, ItemEntryViewDelegate {
+class ItemEntryViewController: UIViewController, ItemEntryViewDelegate, ItemEntryCompleteViewDelegate {
     
     weak var delegate: ItemEntryViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let itemEntryView = ItemEntryView()
+        let itemEntryView = ItemEntryView(frame: view.frame)
         itemEntryView.delegate = self
         view.addSubview(itemEntryView)
-        itemEntryView.snp.makeConstraints { make in
-            make.edges.equalTo(view)
-        }
+        itemEntryView.set(progress: 0)
     }
-        
+    // MARK: - ItemEntryViewDelegate
     func didTapBack() {
         delegate?.didTapBack()
     }
+    
+    // MARK: - ItemEntryCompleteViewDelegate
+    func didTapContinue() {
+        
+    }
+    
+    func didTapAnotherSet() {
+        
+    }
 }
+ 

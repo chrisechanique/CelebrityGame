@@ -1,30 +1,30 @@
 //
-//  BorderedButton.swift
+//  BorderedLabel.swift
 //  CelebrityGame
 //
-//  Created by PJ Loury on 3/16/17.
+//  Created by PJ Loury on 3/17/17.
 //  Copyright © 2017 Chris and PJ Games. All rights reserved.
 //
 
 import UIKit
 
-class BorderedButton: Button {
+class BorderedLabel: Label {
     
     required init(title: String, textColor: UIColor, backgroundColor: UIColor, borderColor: UIColor? = nil, size: CGFloat = 24) {
-        super.init(title: title, size: size)
+        super.init(title: title, textColor: textColor, size: size)
         layer.cornerRadius = 12
         layer.borderWidth = 3
-        titleLabel?.textAlignment = .center
+        textAlignment = .center
+        clipsToBounds = true
         self.backgroundColor = backgroundColor
-        setTitleColor(textColor, for: .normal)
         if let borderColor = borderColor {
             layer.borderColor = borderColor.cgColor
-        } else {
-            layer.borderColor = textColor.cgColor
         }
-        
-        clipsToBounds = true
-        contentEdgeInsets = UIEdgeInsetsMake(8, 20, 8, 20)
+    }
+    
+    override func drawText(in rect: CGRect) {
+        let insets = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+        super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,5 +37,13 @@ class BorderedButton: Button {
     
     required init(title: String, size: CGFloat) {
         fatalError("init(title:size:) has not been implemented")
+    }
+    
+    required init(title: String?, textColor: UIColor, size: CGFloat) {
+        fatalError("init(title:textColor:size:) has not been implemented")
+    }
+    
+    required init(frame: CGRect, title: String?, textColor: UIColor, size: CGFloat) {
+        fatalError("init(frame:title:textColor:size:) has not been implemented")
     }
 }

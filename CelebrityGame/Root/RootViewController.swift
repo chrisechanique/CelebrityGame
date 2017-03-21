@@ -36,6 +36,8 @@ class RootViewController: UIViewController, HomeViewControllerDelegate, ItemEntr
     
     func didTapNewGame() {
         removePreviousChild()
+//        let gamePlayViewController = GamePlayViewController()
+//        addNewChild(viewController: gamePlayViewController)
         let itemEntryViewController = ItemEntryViewController()
         addNewChild(viewController: itemEntryViewController)
         itemEntryViewController.delegate = self

@@ -29,9 +29,9 @@ class HomeView: UIView {
             make.top.equalTo(self).offset(50)
         }
         
-        let newGameButton = BorderedButton(title: "New Game", primaryColor: UIColor.lightPurple(), secondaryColor: UIColor.darkPurple())
+        let newGameButton = BorderedButton(title: "New Game", textColor: UIColor.darkPurple(), backgroundColor: UIColor.lightPurple())
         addSubview(newGameButton)
-        let settingsButton = BorderedButton(title: "Settings", primaryColor: UIColor.lightPurple(), secondaryColor: UIColor.darkPurple())
+        let settingsButton = BorderedButton(title: "Settings", textColor: UIColor.darkPurple(), backgroundColor: UIColor.lightPurple())
         addSubview(settingsButton)
         backgroundColor = .white
         
