@@ -14,17 +14,41 @@ protocol ItemEntryViewControllerDelegate: class {
     func didTapBack()
 }
 
-class ItemEntryViewController: UIViewController, ItemEntryViewDelegate, ItemEntryCompleteViewDelegate {
+class ItemEntryViewController: UIViewController, HeaderViewDelegate, ItemEntryViewDelegate, ItemEntryCompleteViewDelegate {
+    
+    let headerView = ItemEntryHeaderView(frame: .zero)
+    let itemEntryView = ItemEntryView(frame: .zero)
+    let itemEntryCompleteView = ItemEntryCompleteView(frame: .zero)
     
     weak var delegate: ItemEntryViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let itemEntryView = ItemEntryView(frame: view.frame)
-        itemEntryView.delegate = self
+        view.addSubview(headerView)
+        headerView.delegate = self
+        headerView.snp.makeConstraints { (make) in
+            make.top.leading.trailing.equalTo(view)
+            make.height.equalTo(80)
+        }
+        headerView.set(progress: 0)
+        
+        
         view.addSubview(itemEntryView)
-        itemEntryView.set(progress: 0)
+        itemEntryView.delegate = self
+        itemEntryView.snp.makeConstraints { (make) in
+            make.top.equalTo(headerView.snp.bottom)
+            make.leading.trailing.bottom.equalTo(view)
+        }
+        //itemEntryView.isHidden = true
+        
+        view.addSubview(itemEntryCompleteView)
+        itemEntryCompleteView.delegate = self
+        itemEntryCompleteView.snp.makeConstraints { (make) in
+            make.top.equalTo(headerView.snp.bottom)
+            make.leading.trailing.bottom.equalTo(view)
+        }
+        itemEntryCompleteView.isHidden = true
     }
     // MARK: - ItemEntryViewDelegate
     func didTapBack() {

@@ -10,7 +10,7 @@ import UIKit
 
 class Button: UIButton {
  
-    required init(title: String, size: CGFloat = 24.0) {
+    required init(title: String, size: CGFloat = Constants.defaultFontSize) {
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
         self.titleLabel?.font = UIFont.defaultFont(size: size)

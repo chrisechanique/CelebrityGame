@@ -35,7 +35,7 @@ class GamePlayCompleteView: UIView {
         
         continueButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
-            make.bottom.equalTo(self).inset(30)
+            make.bottom.equalTo(self).inset(50)
         }
     }
     

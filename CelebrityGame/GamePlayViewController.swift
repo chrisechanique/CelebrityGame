@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class GamePlayViewController: UIViewController {
+class GamePlayViewController: UIViewController, GamePlayViewDelegate {
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +17,16 @@ class GamePlayViewController: UIViewController {
         view.addSubview(gamePlayView)
     }
     
+    // MARK: - GamePlayScoringViewDelegate
+    func didTapSkip() {
+        
+    }
+    
+    func didTapCorrect() {
+        
+    }
+    
+    func didTapContinue() {
+        
+    }
 }

@@ -16,7 +16,7 @@ protocol ItemEntryCompleteViewDelegate: class {
 class ItemEntryCompleteView: UIView {
 
     weak var delegate: ItemEntryCompleteViewDelegate?
-    let caption = Label(title: "All Set!")
+    let caption = Label(title: "All Set!", textColor: UIColor.lightBlue())
     let cta = BorderedButton(title: "Let's Play!", textColor: UIColor.lightBlue(), backgroundColor: UIColor.lightPurple(), borderColor: UIColor.darkPurple())
     let anotherSetButton = BorderedButton(title: "Another Set", textColor: UIColor.lightBlue(), backgroundColor: UIColor.lightPurple())
     
@@ -25,9 +25,10 @@ class ItemEntryCompleteView: UIView {
         addSubview(caption)
         addSubview(cta)
         addSubview(anotherSetButton)
-        
+        backgroundColor = .white
         caption.snp.makeConstraints { (make) in
-            make.bottom.equalTo(cta.snp.top).offset(-20)
+            make.centerX.equalTo(self)
+            make.bottom.equalTo(cta.snp.top).offset(-40)
         }
         
         cta.snp.makeConstraints { (make) in

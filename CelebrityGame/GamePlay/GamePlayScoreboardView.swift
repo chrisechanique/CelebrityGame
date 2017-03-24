@@ -14,6 +14,7 @@ class GamePlayScoreboardView: UIStackView {
     init() {
         super.init(frame: .zero)
         axis = .vertical
+        spacing = 6
         add(team: "1", color: UIColor.darkGreen(), score: 0)
         add(team: "2", color: UIColor.lightBlue(), score: 0)
         add(team: "3", color: UIColor.darkPurple(), score: 0)

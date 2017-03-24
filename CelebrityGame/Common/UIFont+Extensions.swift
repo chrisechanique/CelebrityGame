@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 extension UIFont {
-    static func defaultFont(size: CGFloat = 24) -> UIFont {
-        return UIFont(name: "Helvetica", size: size)!
+    static func defaultFont(size: CGFloat = Constants.defaultFontSize) -> UIFont {
+        //return UIFont(name: "Helvetica", size: size)!
+        return UIFont(name :".SFUIText-Semibold", size: size)!
     }
 }

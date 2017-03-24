@@ -12,6 +12,7 @@ import SnapKit
 protocol GamePlayViewDelegate: class {
     func didTapSkip()
     func didTapCorrect()
+    func didTapContinue()
 }
 
 class GamePlayView: UIView, GamePlayScoringViewDelegate, GamePlayCompleteViewDelegate {
@@ -27,27 +28,24 @@ class GamePlayView: UIView, GamePlayScoringViewDelegate, GamePlayCompleteViewDel
         addSubview(scoringView)
         addSubview(roundCompleteView)
         
-        // Height and horizontal are ambiguous
         headerView.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalTo(self)
             // needs to be as tall as its stacked subview
         }
         
-        // Horizontal is
         scoringView.snp.makeConstraints { (make) in
             make.top.equalTo(headerView.snp.bottom)
             make.bottom.leading.trailing.equalTo(self)
         }
         scoringView.delegate = self
+        scoringView.isHidden = true
         
         roundCompleteView.snp.makeConstraints { (make) in
             make.top.equalTo(headerView.snp.bottom)
             make.bottom.leading.trailing.equalTo(self)
         }
         roundCompleteView.delegate = self
-        
-        roundCompleteView.isHidden = false
-        scoringView.isHidden = true
+       // roundCompleteView.isHidden = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -55,6 +53,7 @@ class GamePlayView: UIView, GamePlayScoringViewDelegate, GamePlayCompleteViewDel
     }
     
     // MARK: - HeaderView
+    
     func update(score: Int, teamIndex: Int) {
         headerView.update(score: score, teamIndex: teamIndex)
     }
@@ -82,13 +81,18 @@ class GamePlayView: UIView, GamePlayScoringViewDelegate, GamePlayCompleteViewDel
     }
     
     // MARK: - GamePlayScoringViewDelegate
+    
     func didTapSkip() {
+        delegate?.didTapSkip()
     }
     
     func didTapCorrect() {
+        delegate?.didTapCorrect()
     }
     
     // MARK: - GamePlayScoringViewDelegate
+    
     func didTapContinue() {
+        delegate?.didTapContinue()
     }
 }

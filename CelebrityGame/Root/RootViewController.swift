@@ -34,13 +34,23 @@ class RootViewController: UIViewController, HomeViewControllerDelegate, ItemEntr
         child?.removeFromParentViewController()
     }
     
+    
+    // MARK: - HomeViewControllerDelegate
     func didTapNewGame() {
         removePreviousChild()
-//        let gamePlayViewController = GamePlayViewController()
-//        addNewChild(viewController: gamePlayViewController)
+        showItemEntry()
+        //showNewGame()
+    }
+    
+    private func showItemEntry() {
         let itemEntryViewController = ItemEntryViewController()
         addNewChild(viewController: itemEntryViewController)
         itemEntryViewController.delegate = self
+    }
+    
+    private func showNewGame() {
+        let gamePlayViewController = GamePlayViewController()
+        addNewChild(viewController: gamePlayViewController)
     }
     
     func didTapBack() {

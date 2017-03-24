@@ -10,7 +10,7 @@ import UIKit
 
 class BorderedLabel: Label {
     
-    required init(title: String, textColor: UIColor, backgroundColor: UIColor, borderColor: UIColor? = nil, size: CGFloat = 24) {
+    required init(title: String, textColor: UIColor, backgroundColor: UIColor, borderColor: UIColor? = nil, size: CGFloat = Constants.defaultFontSize) {
         super.init(title: title, textColor: textColor, size: size)
         layer.cornerRadius = 12
         layer.borderWidth = 3
@@ -25,6 +25,16 @@ class BorderedLabel: Label {
     override func drawText(in rect: CGRect) {
         let insets = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
         super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
+    }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            switch isHighlighted {
+            case true:
+                backgroundColor = backgroundColor?.darker()
+            case false: break
+            }
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

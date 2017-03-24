@@ -21,22 +21,29 @@ class ItemEntryHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .white
+        
+        addSubview(backButton)
         addSubview(setsLabel)
         addSubview(progressView)
-        addSubview(backButton)
+        
         backButton.snp.makeConstraints { (make) in
-            make.top.leading.equalTo(self)
+            make.leading.equalTo(self)
+            make.centerY.equalTo(progressView.snp.centerY)
         }
         backButton.setTitleColor(UIColor.lightBlue(), for: .normal)
         backButton.addTarget(self, action: #selector(ItemEntryHeaderView.didTapBack), for:.touchUpInside)
         
         setsLabel.snp.makeConstraints { (make) in
             make.leading.equalTo(backButton.snp.trailing).offset(30)
-            make.top.equalTo(progressView.snp.bottom).offset(10)
+            make.centerY.equalTo(progressView.snp.centerY)
         }
         
         progressView.snp.makeConstraints { (make) in
-            make.top.trailing.equalTo(self)
+            make.trailing.equalTo(self).inset(18)
+            make.top.equalTo(self).inset(18)
+            make.height.equalTo(Constants.indicatorDiameter)
+            make.width.equalTo(180)
         }
     }
     
@@ -49,7 +56,7 @@ class ItemEntryHeaderView: UIView {
     }
     
     // MARK: - Public
-    func set(_ progress: Int) {
+    func set(progress: Int) {
         progressView.set(progress)
     }
 }

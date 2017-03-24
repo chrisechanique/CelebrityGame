@@ -59,6 +59,10 @@ extension UIColor {
             alpha: CGFloat(1.0)
         )
     }
+
+    class func brightPurple() -> UIColor {
+        return UIColor(hex: "B037E6")
+    }
     
     class func lightPurple() -> UIColor {
         return UIColor(hex: "F4E4F3")

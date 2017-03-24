@@ -15,40 +15,35 @@ protocol ItemEntryViewDelegate: class {
     func didTapBack()
 }
 
-class ItemEntryView: UIView, HeaderViewDelegate {
+class ItemEntryView: UIView {
     
     weak var delegate: ItemEntryViewDelegate?
     
-    private let label = Label(title: "Enter An Item")
+    private let label = Label(title: "Enter An Item", size: 34)
     private let textField = TextField(placeholder: "Barbra Streisand")
-    
-    let headerView = ItemEntryHeaderView(frame: .zero)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
-        addSubview(headerView)
+        
         addSubview(label)
         addSubview(textField)
         
-        headerView.delegate = self
-        headerView.snp.makeConstraints { (make) in
-            make.top.leading.trailing.equalTo(self)
-            make.height.equalTo(80)
-        }
-        
         label.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
-            make.top.equalTo(self.snp.top).offset(20)
+            make.top.equalTo(self.snp.top)
         }
         label.textColor = UIColor.lightBlue()
-        
+    
         textField.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
-            make.top.equalTo(label.snp.bottom).offset(10)
-            make.height.equalTo(60)
+            make.centerY.equalTo(self).inset(-60)//.snp.bottom).offset(20)
+            make.leading.equalTo(self.snp.leading).inset(180)
+            make.height.equalTo(65)
         }
         
+        textField.textAlignment = .center
+        textField.autocorrectionType = .no
         textField.becomeFirstResponder()
     }
 
@@ -61,15 +56,8 @@ class ItemEntryView: UIView, HeaderViewDelegate {
         textField.layer.cornerRadius = textField.frame.height/2
     }
     
-    // MARK: - HeaderViewDelegate
-    func didTapBack() {
+    func resignTextField() {
         textField.resignFirstResponder()
-        delegate?.didTapBack()
     }
-    
-    // MARK: - Public
-    func set(progress: Int) {
-        headerView.set(progress)
-    }
-    
+        
 }

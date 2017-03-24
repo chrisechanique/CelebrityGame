@@ -10,7 +10,7 @@ import UIKit
 
 class Label: UILabel {
     
-    required init(frame: CGRect = .zero, title: String? = nil, textColor: UIColor = UIColor.darkPurple(), size: CGFloat = 24.0) {
+    required init(frame: CGRect = .zero, title: String? = nil, textColor: UIColor = UIColor.darkPurple(), size: CGFloat = Constants.defaultFontSize) {
         super.init(frame: frame)
         text = title
         font = UIFont.defaultFont(size: size)
